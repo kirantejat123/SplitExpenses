@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login page</title>
+    {% load staticfiles %}
+    <link href="{% static 'login.css' %}" rel="stylesheet">
+</head>
+<body>
+<form action="/logincheck/" method="post">
+    {% csrf_token %}
+    <div class="container">
+    <label for="email"><b>EMAIL</b></label>
+    <input type="email" name="email" placeholder="enter email">
+    <label for="pwd"><b>NAME</b></label>
+    <input type="password" name="pwd" placeholder="enter password">
+        <div class="clearfix">
+    <button type="submit" >login</button>
+        </div>
+    </div>
+    {{ msg }}
+</form>
+</body>
+</html>

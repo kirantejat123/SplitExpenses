@@ -1,0 +1,27 @@
+
+
+#size {
+    font-size: 14px;
+}
+
+#size .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: brown;
+    z-index: 99;
+    border-bottom: 1px solid brown;
+    color:orange;
+    text-shadow: 0 -1px 0 brown;
+    box-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+#size .header .container{
+    height: 48px;
+}
+
+#size.h1{
+
+    padding: 21px 10px 23px;
+    width: auto;
+}

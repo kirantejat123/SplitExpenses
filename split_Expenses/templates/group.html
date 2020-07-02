@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>creating group</title>
+</head>
+<body>
+<form action="/group/" method="post">
+    {% csrf_token %}
+        <input type="hidden" name="name" value="{{ name }}">
+
+    <h1 style="color: #4CAF50;">If you want to know the groups which you have created then click here::<input type="submit" value="getgroups" name="b"  ></h1>
+
+    <br>
+    <h1 style="color: orangered"> Enter new Group name to create:<input type="text" placeholder="group name" name="groupName" ><br></h1>
+   <h1>1)<input type="text" placeholder="name a friend" name="m">
+       AND <input type="email" placeholder="email" name="email1"></h1><br>
+    <h1>2)<input type="text" placeholder="name a friend" name="n">
+        AND <input type="email" placeholder="email" name="email2"></h1><br>
+    <h1>3)<input type="text" placeholder="name a friend" name="o">
+        AND <input type="email" placeholder="email" name="email3"></h1><br>
+    <input type="hidden" name="name" value="{{ name }}">
+   <h1> <input type="submit" value="save" name="b"></h1>
+
+</form>
+</body>
+</html>

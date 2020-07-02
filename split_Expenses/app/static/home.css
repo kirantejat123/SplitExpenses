@@ -1,0 +1,14 @@
+header{
+    background-color: brown;
+    padding: 10px;
+    font-size: 8px;
+    text-align: left;
+    color: white;
+}
+nav {
+  float: left;
+  width: 15%;
+  height: 200px; /* only for demonstration, should be removed */
+  background: white;
+  padding: 20px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home page</title>
+    {% load staticfiles %}
+    <link href="{% static 'home.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<header>
+    <h1>splitwise.com</h1>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="/addgroup/?s={{ name.email }}">add a group{{ name.email }}</a></li>
+
+
+      <li><a href="/bill/">add bill</a></li>
+      <li><a href="#">logout</a></li>
+    </ul>
+  </nav>
+</section>
+{% if result %}
+    <h2>these groups are which you have created </h2>:<h1>{{ result }}</h1>
+{% endif %}
+{% if msg %}
+    {{ msg }}
+{% endif %}
+{% if res %}
+    <h2>to whih group you want to add the bill :::</h2>
+    {% for i in res %}
+        <h2> {{ i }}</h2>
+    {% endfor %}
+    <form action="/addbill/" method="post">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="enter group name" >
+        <input type="hidden" name="loginname" value="{{ name.name }}">
+    <input type="submit" value="go">
+    </form>
+{% endif %}
+</body>
+</html>

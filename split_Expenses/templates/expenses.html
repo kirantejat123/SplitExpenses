@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+{% if you|slice:"0:1" == "-" %}
+    <h2 style="color: blueviolet">{{ details.you }} owes {{ you|slice:"1:"}} rupees to the {{ groupname }} group.
+              If Want to settleup press here::<a href="/you/?a={{ details.groupName}} {{ details.you}} you ">Settle Up</a></h2>
+  {% elif you|slice:"0:1" == "0" %}
+
+    <h2 style="color: cyan">{{ details.you }} settled up with {{ groupname }} group.</h2>
+{% else %}
+    <h2 style="color: orangered">{{ details.you }} lent {{ you }} rupees from the {{ groupname }} group.
+    If Want to settleup press here::<a href="/you/?a={{ details.groupName}} {{ details.you}} you">Settle Up</a></h2>
+
+{% endif%}
+{% if friend1|slice:"0:1" == "-" %}
+    <h2 style="color: blueviolet">{{ details.friend1 }} owes {{ friend1|slice:"1:" }} rupees to the {{ groupname }} group.
+        If Want to settleup press here::<a href="/you/?a={{ details.groupName}} {{ details.friend1}} friend1">Settle Up</a></h2>
+
+{% elif friend1|slice:"0:1" == "0" %}
+        <h2 style="color: cyan">{{ details.friend1 }} settled up {{ groupname }} this group.
+
+{% else %}
+    <h2 style="color: orangered">{{ details.friend1 }} lent {{ friend1 }} rupees from the {{ groupname }} group.
+        If Want to settleup press here::<a href="/you/?a={{ details.groupName}} {{ details.friend1 }} friend1" >Settle Up</a></h2>
+
+{% endif%}
+{% if friend2|slice:"0:1" == "-" %}
+    <h2 style="color: blueviolet">{{ details.friend2 }} owes {{ friend2|slice:"1:" }} rupees to the {{ groupname }} group.
+        If Want to settleup press here::<a href="/you/?a={{ details.groupName}} {{ details.friend2 }} friend2">Settle  Up</a></h2>
+
+{% elif friend2|slice:"0:1" == "0" %}
+        <h2 style="color: cyan">{{ details.friend2 }} settled up {{ groupname }} this group.</h2>
+{% else %}
+    <h2 style="color: orangered">{{ details.friend2 }} lent {{ friend2}} rupees from the {{ groupname }} group.
+        If Want to settleup press here::<a href="/you/?a={{ details.groupName}} {{ details.friend2 }} friend2">Settle Up</a></h2>
+{% endif%}
+{% if friend3|slice:"0:1" == "-" %}
+    <h2 style="color: blueviolet">{{ details.friend3 }} owes {{ friend3|slice:"1:" }} rupees to the {{ groupname }} group.
+        If Want to settleup press here::<a href="/you/?a={{ details.groupName}} {{ details.friend3 }} friend3">Settle Up</a></h2>
+
+{% elif friend3|slice:"0:1" == "0" %}
+        <h2 style="color: cyan">{{ details.friend3 }} settled up with this group.</h2>
+{% else %}
+    <h2 style="color: orangered">{{ details.friend3 }} lent {{friend3 }} rupees from the {{ groupname }} group.
+        If Want to settleup press here::<a href="/you/?a={{ details.groupName}} {{ details.friend3 }} friend3">Settle Up</a></h2>
+
+{% endif%}
+
+</body>
+</html>

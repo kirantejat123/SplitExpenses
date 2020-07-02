@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load staticfiles %}
+    <link href="{% static 'stylesheet.css' %}" rel="stylesheet">
+</head>
+<body>
+<div class="header" style="background-color: orangered">
+    <div class="container">
+        <h1>SplitExpenses</h1>
+
+{#        <div class="loginLinks">#}
+{#            <h1> <a href="/login/" ><b>login</b></a></h1> or#}
+{#            <h1> <a href="/signin/"><b>signup</b></a></h1>#}
+{#        </d iv>#}
+
+    </div>
+</div>
+<table align="center" bgcolor="#f5f5dc">
+
+    <tr>
+        <td>
+            <h1 >split expenses with friends</h1>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h1>
+                if you are already a member just login:<h1> <a href="/login/" ><b>login</b></a></h1> <h3>(OR)</h3>
+            </h1>
+        </td>
+            </tr>
+    <tr>
+        <td>
+            <h1>if you are not a member then please sign up first</h1> <h1> <a href="/signin/"><b>signup</b></a></h1
+</h1>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

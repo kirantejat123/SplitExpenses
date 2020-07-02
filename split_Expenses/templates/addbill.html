@@ -1,0 +1,20 @@
+<html>
+<head></head>
+<body>
+<form action="/totalExpenses/" method="post">
+    {% csrf_token %}
+    <input type="hidden" value="{{ groupname }}" name="groupname">
+<h2 style="color: chocolate">group name is {{ groupname }}</h2>
+<h2 style="color: darkgreen">add total expense for trip::</h2>
+<input type="number"  name="e" placeholder="enter amount">
+
+<h2 style="color: orangered">the amount paid by you is :::</h2><input type="number" name="a" placeholder="enter amount">
+<h2 style="color: orangered">the amount paid by friend1 is :::</h2><input type="number"  name="b" placeholder="enter amount">
+<h2 style="color: orangered" >the amount paid by friend2 is :::</h2><input type="number"  name="c" placeholder="enter amount">
+<h2 style="color: orangered">the amount paid by friend3 is :::</h2><input type="number" name="d" placeholder="enter amount"><br>
+<h3 style="color: blueviolet"><input type="submit" value="get total shared bill among fiends"></h3>
+    </form>
+
+
+</body>
+</html>

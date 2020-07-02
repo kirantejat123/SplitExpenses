@@ -1,0 +1,31 @@
+input[type=password]:focus ,input[type=email]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+ input[type=password] , input[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}

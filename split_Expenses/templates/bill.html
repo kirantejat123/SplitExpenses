@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BILL</title>
+</head>
+<body>
+<form action="/select/" method="post">
+    {% csrf_token %}
+    <h2 style="color: brown"> you have selected  {{ groupname }}  group.these group contains four members they are:::: </h2>
+    <table>
+        <tr>
+            <td>
+                <input type="hidden" value="{{ groupname }}" name="groupname">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2 style="color: blue"> {{ res.friend1 }}({{ res.friend1email }})</h2>
+            </td>
+        </tr><tr>
+            <td>
+                <h2 style="color:blue ">{{ res.friend2 }}({{ res.friend2email}})</h2>
+            </td>
+        </tr><tr>
+            <td>
+                <h2 style="color:blue">{{ res.friend3 }}({{ res.friend3email }})</h2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2 style="color:blue">{{ res.you }}({{ res.yoursemail }})</h2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2 style="color: darkgreen"> press here to add expenses to {{ groupname }} group</h2><input type="submit" value="add expense">
+
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
